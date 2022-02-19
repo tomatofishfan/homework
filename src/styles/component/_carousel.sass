@@ -1,0 +1,122 @@
+.carousel
+  position: relative
+  margin-top: $space-15
+  &_outer
+    width: 100%
+    overflow: hidden
+  &_inner
+    overflow-x: scroll
+    -ms-overflow-style: none
+    scrollbar-width: none
+    &::-webkit-scrollbar
+      display: none
+    ul
+      display: inline-flex
+      padding: $space-4
+    li
+      width: 280px
+      height: 460px
+      border-radius: $radius-sm
+      overflow: auto
+      box-shadow: $shadow
+      background: $white
+      margin-right: $space-15
+      display: flex
+      flex-direction: column
+      &:last-child
+        margin-right: 0
+      @media (max-width: $mblrwd-breakpoint)
+        width: 260px
+        min-height: 390px
+  &_img
+    position: relative
+    width: 100%
+    height: 160px
+    @media (max-width: $mblrwd-breakpoint)
+      height: 145px
+  &_body
+    padding: $space-15 $space-20 $space-20
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    flex: 1
+    &_together
+      color: $gray
+      font-size: $font-size-sm
+      display: flex
+      align-items: center
+      margin-bottom: $space-8
+      font-weight: $bold
+      .fa-icon
+        margin-right: $space-6
+        *
+          color: $gray
+    &_text
+      margin-bottom: $space-8
+      h4
+        font-size: $fa-w-20
+        margin-bottom: $space-8
+      p
+        font-size: $fa-w-14
+        color: $gray-1
+        overflow: hidden
+        white-space: nowrap
+        text-overflow: ellipsis
+    &_score
+      display: flex
+      align-items: center
+      font-size: $font-size-xs
+      margin-bottom: $space-8
+      > *
+        margin-right: $space-4
+    &_star
+      *
+        color: $yellow
+      > *
+        margin-right: 4px
+    &_hashtag
+      span
+        padding: $space-4 $space-8
+        margin: 0 $space-6 $space-6 0
+        background: $bg-gray
+        color: $blue
+        font-size: $font-size-xs
+        white-space: nowrap
+        display: inline-block
+        border-radius: $radius-xs
+    &_price
+      display: flex
+      align-items: baseline
+      h6
+        color: $red
+        margin-right: $space-8
+        font-weight: $bold
+      p
+        font-size: $font-size-xs
+        color: $gray
+        text-decoration: line-through $gray
+    &_btn
+      display: flex
+      justify-content: center
+      margin-top: $space-6
+      .btn
+        flex: 1
+        margin-right: $space-15
+        display: flex
+        justify-content: center
+        align-items: center
+        &:last-child
+          margin-right: 0
+      .fa-icon
+        margin-left: $space-4
+        *
+          color: $white
+  &_arrow
+    position: absolute
+    top: 50%
+    transform: translate(-50%, -50%)
+    cursor: pointer
+    &-left
+      left: calc(#{-$fa-w-20} - #{$space-10})
+    &-right
+      left: calc(100% + #{$fa-w-20} + #{$space-10})
