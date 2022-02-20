@@ -9,7 +9,7 @@ const Meta = ({ title }: Props): JSX.Element => (
     <title>{title}</title>
     <meta charSet="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
-    <link rel="shortcut icon" href={'/public/favicon.webp'} />
+    <link rel="shortcut icon" href={'/favicon.webp'} />
   </Head>
 );
 

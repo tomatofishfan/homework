@@ -10,24 +10,24 @@
     scrollbar-width: none
     &::-webkit-scrollbar
       display: none
-    ul
-      display: inline-flex
-      padding: $space-4
-    li
-      width: 280px
-      height: 460px
-      border-radius: $radius-sm
-      overflow: auto
-      box-shadow: $shadow
-      background: $white
-      margin-right: $space-15
-      display: flex
-      flex-direction: column
-      &:last-child
-        margin-right: 0
-      @media (max-width: $mblrwd-breakpoint)
-        width: 260px
-        min-height: 390px
+  &_list
+    display: inline-flex
+    padding: $space-4
+  &_item
+    width: 280px
+    min-height: 460px
+    border-radius: $radius-sm
+    overflow: auto
+    box-shadow: $shadow
+    background: $white
+    margin-right: $space-15
+    display: flex
+    flex-direction: column
+    &:last-child
+      margin-right: 0
+    @media (max-width: $mblrwd-breakpoint)
+      width: 260px
+      min-height: 390px
   &_img
     position: relative
     width: 100%
@@ -56,6 +56,8 @@
       h4
         font-size: $fa-w-20
         margin-bottom: $space-8
+        &:hover
+          text-decoration: underline
       p
         font-size: $fa-w-14
         color: $gray-1
